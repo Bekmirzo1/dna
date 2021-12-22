@@ -120,6 +120,14 @@ if (document.querySelector('.page')) {
             e.preventDefault();
         });
     }
+    // Scroll to second
+    const assortment = document.querySelector('.menu__item_assortment');
+    if (assortment) {
+        assortment.addEventListener('click', function (e) {
+            pageSlider.slideTo(1, 800)
+            e.preventDefault();
+        });
+    }
     pageSlider.init();
 }
 
