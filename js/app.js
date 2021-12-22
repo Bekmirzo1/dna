@@ -14,23 +14,6 @@ testWebP(function (support) {
         document.querySelector('html').classList.add('_no-webp');
     }
 });
-
-let unlock = true;
-
-// *iconMenu
-let menuBody = document.querySelector('.menu__body');
-let iconMenu = document.querySelector('.icon-menu');
-if (iconMenu) {
-    iconMenu.addEventListener('click', function () {
-        iconMenu.classList.toggle('_active');
-        menuBody.classList.toggle('_active');
-    })
-}
-// Menu close
-function menu_close() {
-    iconMenu.classList.remove("_active");
-    menuBody.classList.remove("_active");
-}
 const headerControlELement = document.querySelector('.page__header-min');
 
 if (headerControlELement) {
@@ -47,7 +30,6 @@ if (headerControlELement) {
     headerObserver.observe(headerControlELement);
 }
 
-const pageSlider = document.querySelector('.page');
 if (document.querySelector('.page')) {
     const wrapper = document.querySelector('.wrapper');
     let pageSlider = new Swiper('.page', {
